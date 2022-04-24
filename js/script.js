@@ -30,6 +30,7 @@ const toodolist = new Vue({
                 todo: this.nuovoTodo,
             }
             this.viaggio.push(newObj);
+            this.nuovoTodo = ''
         }
     },
 
