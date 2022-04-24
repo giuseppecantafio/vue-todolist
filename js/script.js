@@ -23,6 +23,14 @@ const toodolist = new Vue({
     methods: {
         rimuovi(index){
             this.viaggio.splice(index,1)
+        },
+        aggiungi(){
+            let newObj = {
+                done: false,
+                todo: this.nuovoTodo,
+            }
+            this.viaggio.push(newObj);
         }
     },
+
 })

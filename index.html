@@ -24,6 +24,7 @@
                             <span @click="item.done = !item.done">{{item.todo }}</span> 
                             <span><i class="fa-solid fa-xmark" @click="rimuovi(index)"></i></span>
                     </ul>
+                <input type="text" v-model="nuovoTodo"><button @click="aggiungi">Aggiungi</button>
                 </div>
             </div>
         </div>
