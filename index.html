@@ -12,18 +12,22 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-    <title>Esercizi</title>
+    <title>To Do List viaggio in Giappone!</title>
 </head>
 <body>
     <div id="app">
         <div class="container mt-4">
             <div class="row">
                 <div class="col-12">
+                    <h4>To Do List viaggio in Giappone! </h4>
                     <ul>
                         <li v-for="(item, index) in viaggio" :key="index" :class="{'text-decoration-line-through': item.done === true}">
-                            <span @click="item.done = !item.done">{{item.todo }}</span> 
+                            <span @click="item.done = !item.done">{{item.todo}}</span> 
                             <span><i class="fa-solid fa-xmark" @click="rimuovi(index)"></i></span>
                     </ul>
+                    <h4 v-if="viaggio.length === 0">
+                        Carica un nuovo todo nel form sottostante
+                    </h4>
                 <input type="text" v-model="nuovoTodo" @keyup.enter="aggiungi"><button @click="aggiungi">Aggiungi</button>
                 </div>
             </div>
