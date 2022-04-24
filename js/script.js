@@ -21,6 +21,8 @@ const toodolist = new Vue({
     },
 
     methods: {
-
+        rimuovi(index){
+            this.viaggio.splice(index,1)
+        }
     },
 })
