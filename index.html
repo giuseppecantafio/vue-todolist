@@ -20,9 +20,8 @@
             <div class="row">
                 <div class="col-12">
                     <ul>
-                        <li v-for="(item, index) in viaggio" :key="index" :class="{'text-decoration-line-through': item.done === true}" @click="item.done = !item.done">
-                            {{item.todo}}
-                        </li>
+                        <li v-for="(item, index) in viaggio" :key="index" :class="{'text-decoration-line-through': item.done === true}">
+                            {{item.todo }} <i class="fa-solid fa-xmark" @click="item.done = !item.done"></i>
                     </ul>
                 </div>
             </div>
